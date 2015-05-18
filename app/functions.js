@@ -17,9 +17,6 @@ exports.functionsAnswers = {
 
   makeClosures : function(arr, fn) {
     var values = [];
-
-    //why return a function instead of just fn(value) below?
-
     var makeFn = function(value){
       return function() { return fn(value); }
     }
@@ -32,8 +29,8 @@ exports.functionsAnswers = {
 
     partial : function(fn, str1, str2) {
       return function(additional){
-        //why the null (hello does not get returned)?
-        //fills the first arg of sayIt function
+        why the null (hello does not get returned)?
+        fills the first arg of sayIt function
         return fn.call(null, str1, str2, additional);
       };
     },
